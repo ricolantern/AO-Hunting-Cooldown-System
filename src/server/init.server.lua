@@ -1,12 +1,14 @@
 --[[
-    Created by Partcline
-    29/10/2023
+    Created by Partcline for use by Vetex
+    2023/10/29
 
     THIS IS AN EXAMPLE FILE.
 
     This file shows you how the system can be used to track, remove, and retrieve cooldown data on a per-player basis.
     The idea is that the server is always in control of the truth regarding a cooldown,
     and that the player does nothing but listen to the server for updates on their cooldowns.
+
+    https://github.com/ricolantern/AO-Hunting-Cooldown-System
 ]]
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")

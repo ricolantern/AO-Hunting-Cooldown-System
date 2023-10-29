@@ -1,3 +1,15 @@
+--[[
+    Created by Partcline for use by Vetex
+    2023/10/29
+
+    This service is in charge of keeping track of all cooldowns for every player in the server.
+    A parent module/script can make use of this service to add, remove, or listen to cooldown changes.
+    The parent module/script can then notify the player of these changes through the use of remotes,
+    and also easily grab all of their active cooldowns for saving to datastore.
+
+    https://github.com/ricolantern/AO-Hunting-Cooldown-System
+]]
+
 local HuntCooldownService = {}
 
 local ServerScriptService = game:GetService("ServerScriptService")
