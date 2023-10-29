@@ -10,10 +10,10 @@
       "Remotes": {
         "$className": "Folder",
 
-        "RE_SetAllActiveHuntCooldowns": {
+        "RE_SetAllHuntCooldowns": {
           "$className": "RemoteEvent"
         },
-        "RE_SetActiveHuntCooldown": {
+        "RE_SetHuntCooldown": {
           "$className": "RemoteEvent"
         }
       }
