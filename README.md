@@ -35,7 +35,7 @@ Try disconnecting one of the clients (closing the window) while it still has coo
 ## Save data adjustments
 Below lists the required save data changes, providing an old->new example.
 ### Old data structure
-```json
+```
 { // Player save.
     ...,
     LastHuntAt: 1697563692,
@@ -43,7 +43,7 @@ Below lists the required save data changes, providing an old->new example.
 }
 ```
 ### New data structure
-```json
+```
 { // Player save.
     ...,
     HuntCooldowns: {
