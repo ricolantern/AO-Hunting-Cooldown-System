@@ -4,12 +4,13 @@ local RunService = game:GetService("RunService")
 
 
 --[[ Creates a new instance of this object. ]]
-function HuntCooldown.new(userId, timestamp, timer)
+function HuntCooldown.new(hunterId, targetId, timestamp, timer)
     local self = setmetatable({}, {__index = HuntCooldown}) -- Inherit the functions declared on HuntCooldown.
     
-    self.userId = userId or error("userId cannot be nil!")
+    self.hunterId = hunterId or error("hunterId is required!")
+    self.targetId = targetId or error("targetId is required!")
     self.timestamp = timestamp or tick() -- In seconds, defaulting to "now".
-    self.timer = timer or error("timer cannot be nil!")
+    self.timer = timer or error("timer is required!")
 
     -- Private properties, for internal reference and use only.
     self._heartbeat = nil
@@ -47,7 +48,7 @@ function HuntCooldown:End()
         self._heartbeat = nil
     end
 
-    self.BE_COOLDOWN_ENDED:Fire(self.userId)
+    self.BE_COOLDOWN_ENDED:Fire(self.hunterId, self.targetId)
 end
 
 function HuntCooldown:Destroy()
